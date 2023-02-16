@@ -23,7 +23,7 @@ public class App {
             HibernateTemplate hibernateTemplate =new HibernateTemplate( (SessionFactory) bean);
                         Student student=new Student(54545, "DSAdfl","sdfsdf");
                         
-                        hibernateTemplate.delete(student);
+                        hibernateTemplate.save(student);
                         
                         
 //               
