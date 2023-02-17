@@ -5,8 +5,9 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Service;
 
 import com.spring.orm.Student;
+import org.springframework.transaction.annotation.Transactional;
 
-import jakarta.persistence.PersistenceUnit;
+import javax.persistence.PersistenceUnit;
 
 @Service
 public class StudentDao {
@@ -15,7 +16,8 @@ public class StudentDao {
     @PersistenceUnit
 	private HibernateTemplate hibernateTemplate;
 	public int insert(Student student) {
-       Integer r=(Integer)  this.hibernateTemplate.save(student);
+
+       Integer r=(Integer)this.hibernateTemplate.save(student);
          System.out.print("added");
          return r ;
     }

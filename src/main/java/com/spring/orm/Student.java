@@ -1,12 +1,12 @@
 package com.spring.orm;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 
 //@Entity(name = "abc")  //table name or @Table(name="students")
 @Entity  //create autometic class name table
-@Table(name="pp")
+@Table(name = "Student")
 public class Student {
 	@Id    /// for making primary key
 	@Column(name = "student_id")
